@@ -1,0 +1,94 @@
+{
+    "recettes": [
+        {
+            "id": 1,
+            "nom": "Bol protéiné à la mexicaine",
+            "src": "https://www.chefcookit.com/recipes/bol_proteines_mexicain",
+            "temps": "40",
+            "categorie": "keto",
+            "img": "/img/bol_mexicain.jpg",
+            "ingredients": [
+                {
+                    "nom": "quinoa blanc",
+                    "quantite": "150g"
+                },
+                {
+                    "nom": "fromage halloumi",
+                    "quantite": "235g"
+                },
+                {
+                    "nom": "boite de conserve de pois chiches",
+                    "quantite": 1
+                },
+                {
+                    "nom": "oignon",
+                    "quantite": 1
+                },
+                {
+                    "nom": "tomate",
+                    "quantite": 1
+                },
+                {
+                    "nom": "coriandre",
+                    "quantite": 1
+                },
+                {
+                    "nom": "mélange d'épices (poudre d'ail, chipotle, cumin)",
+                    "quantite": "15ml"
+                },
+                {
+                    "nom": "lime",
+                    "quantite": 1
+                },
+                {
+                    "nom": "crème sure",
+                    "quantite": "35ml"
+                }
+            ],
+            "outils": [
+                "Plaque de cuisson",
+                "bols",
+                "casserole",
+                "poêle"
+            ],
+            "etapes": [
+                {
+                    "ordre": 1,
+                    "titre": "Faire les pois chiches croustillants",
+                    "image": "/img/bol_mexicain_1.jpg",
+                    "texte": "Préchauffer le four à 425°F et amener une casserole d'eau à ébullition. Étendre les pois chiches sur une plaque de cuisson. Ajouter le mélange d'épices, au goût (attention! épicé) et un filet d'huile d'olive. Si désiré, utiliser une épice appréciée des enfants pour une partie des pois chiche. Saler et poivrer et cuire au four 20-25 minutes."
+                },
+                {
+                    "ordre": 2,
+                    "titre": "Cuire le quinoa",
+                    "image": "/img/bol_mexicain_2.jpg",
+                    "texte": "Rincer le quinoa. Une fois l'eau bouillante, ajouter le quinoa et cuire 14-15 minutes jusqu'à tendreté. Égoutter et réserver."
+                },
+                {
+                    "ordre": 3,
+                    "titre": "Mise en place",
+                    "image": "/img/bol_mexicain_3.jpg",
+                    "texte": "Hacher la coriandre et l'oignon. Couper la tomate en dés. Zester la lime et couper en deux. Trancher le halloumi."
+                },
+                {
+                    "ordre": 4,
+                    "titre": "Cuire le halloumi",
+                    "image": "/img/bol_mexicain_4.jpg",
+                    "texte": "Dans un poêle, à feu moyen-élevé, cuire les tranches de halloumi environ 2-3 minutes de chaque côté jusqu'à coloration."
+                },
+                {
+                    "ordre": 5,
+                    "titre": "Faire le pico de gallo et la sauce",
+                    "image": "/img/bol_mexicain_5.jpg",
+                    "texte": "Dans un bol, mélanger les tomates, les oignons, la coriandre et le jus d'une demi-lime. Bien mélanger et saler et poivrer. Dans un autre bol, mélanger la crème sure avec le zeste de lime, le jus d'une demi-lime et un filet d'huile d'olive. Saler et poivrer et bien mélanger."
+                },
+                {
+                    "ordre": 6,
+                    "titre": "Monter l'assiette",
+                    "image": "/img/bol_mexicain_6.jpg",
+                    "texte": "Servir le quinoa avec les pois chiches croustillants, le halloumi et le pico de gallo. Garnir avec la sauce. Bon appétit!"
+                }
+            ]
+        }
+    ]
+}
