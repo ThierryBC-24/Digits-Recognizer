@@ -43,28 +43,28 @@ y_valid = keras.utils.to_categorical(y_valid, n_class)
 # Model construction
 model = keras.Sequential([
     # Data augmentation
-    preprocessing.RandomTranslation(height_factor=0.1, width_factor=0.1),
+    # preprocessing.RandomTranslation(height_factor=0.1, width_factor=0.1),
 
     # First convolutional block
-    layers.BatchNormalization(renorm=True),
+    # layers.BatchNormalization(renorm=True),
     layers.Conv2D(filters=32, kernel_size=[3,3], padding='same', activation='relu', input_shape=input_shape),
     layers.MaxPool2D(pool_size=(2, 2), strides=2),
     layers.Dropout(rate=0.3),
 
     # Second convolutional block
-    layers.BatchNormalization(renorm=True),
+    # layers.BatchNormalization(renorm=True),
     layers.Conv2D(filters=64, kernel_size=[3, 3], padding='same', activation='relu'),
     layers.MaxPool2D(pool_size=(2, 2), strides=2),
     layers.Dropout(rate=0.3),
 
     # Third convolutional block
-    layers.BatchNormalization(renorm=True),
+    # layers.BatchNormalization(renorm=True),
     layers.Conv2D(filters=128, kernel_size=[3, 3], padding='same', activation='relu'),
     layers.MaxPool2D(pool_size=(2, 2), strides=2),
     layers.Dropout(rate=0.3),
 
     # Classifier head
-    layers.BatchNormalization(renorm=True),
+    # layers.BatchNormalization(renorm=True),
     layers.Flatten(),
     layers.Dense(120, activation='relu'),
     layers.Dropout(rate=0.3),
