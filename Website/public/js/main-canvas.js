@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+    // Objects
     const canvas = document.querySelector("#sheet");
     const clearBtn = document.querySelector("#clear-btn");
     const result = document.querySelector("#result");
@@ -8,12 +9,24 @@ window.addEventListener('load', () => {
         window.model = model;
     });
 
+    // Variables
     let painting = false;
     const imgWidth = 28;
     const imgHeight = 28;
-    const predictionThreshold = 0.9;
+    const predictionThreshold = 0.7;
 
     canvas.addEventListener('mousedown', () => { painting = true; });
+    canvas.addEventListener('mousemove', (e) => {
+        if (!painting)
+            return;
+        context.lineWidth = 30;
+        context.strokeStyle = 'blue';
+        context.lineCap = 'round';
+        context.lineTo(e.clientX - rect.left, e.clientY - rect.top);
+        context.stroke();
+        context.beginPath();
+        context.moveTo(e.clientX - rect.left, e.clientY - rect.top);
+    });
     canvas.addEventListener('mouseup', () => {
         painting = false;
         context.beginPath();
@@ -22,6 +35,8 @@ window.addEventListener('load', () => {
             context.drawImage(img, 0, 0, imgWidth, imgHeight);
             data = context.getImageData(0, 0, imgWidth, imgHeight).data;
             let input = [];
+
+            getBoundingBoxes(img);
 
             for (let i = 0; i < data.length; i += 4)
                 input.push(data[i + 2] / 255);
@@ -34,22 +49,10 @@ window.addEventListener('load', () => {
                     predicted = scores.indexOf(maxScore);
                 else
                     predicted = "";
-                result.innerHTML = predicted;
+                result.innerHTML += predicted;
             });
         }
         img.src = canvas.toDataURL();
-    });
-
-    canvas.addEventListener('mousemove', (e) => {
-        if (!painting)
-            return;
-        context.lineWidth = 30;
-        context.strokeStyle = 'blue';
-        context.lineCap = 'round';
-        context.lineTo(e.clientX - rect.left, e.clientY - rect.top);
-        context.stroke();
-        context.beginPath();
-        context.moveTo(e.clientX - rect.left, e.clientY - rect.top);
     });
 
     clearBtn.onclick = () => {
@@ -57,3 +60,8 @@ window.addEventListener('load', () => {
         result.innerHTML = "";
     };
 });
+
+function getBoundingBoxes(img) {
+    src = cv.imread(img);
+    console.log("img.size: " + src.size);
+}
