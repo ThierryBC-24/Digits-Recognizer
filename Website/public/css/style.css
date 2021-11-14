@@ -31,9 +31,7 @@ main {
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto 100px auto;
-    flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
 }
 
 footer {
@@ -79,33 +77,39 @@ footer {
 }
 
 #main-canvas {
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 #drawing-box {
-    width: 500px;
-    height: 500px;
+    position: relative;
+    width: 1000px;
+    height: 250px;
     border: 1px solid;
     border-color: #17252a;
-    margin-top: 50px;
 }
 
-#result-box {
-    width: 500px;
-    height: 500px;
-    border: 1px solid;
-    border-color: #17252a;
-    margin-top: 50px;
+#drawing-box canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-
 #result {
     font-size: 10em;
+    width: 1000px;
+    height: 250px;
+    border: 1px solid;
+    border-color: #17252a;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 #clear-btn {
     padding: 10px;
+    margin-top: 50px;
+    min-width: 150px;
     font-size: 1em;
     color: #fff;
     cursor: pointer;
@@ -113,5 +117,4 @@ footer {
     border: 1px solid #17252a;
     border-radius: 4px;
     transition: all ease-out 0.2s;
-    max-width: 150px;
 }

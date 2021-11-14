@@ -12,22 +12,21 @@
 
 <body>
     <header>
-        <div class="header-container justify-container">
-            <h1>
-                Digits Recognizer Project
-            </h1>
+        <div class="header-container">
+            <h1>Digits Recognizer Project</h1>
         </div>
     </header>
     <main>
         <div id="main-canvas">
+            <h3>Input :</h3>
             <div id="drawing-box">
-                <canvas id="sheet" width="500" height="500"></canvas>
+                <canvas id="displaySheet" width="1000" height="250"></canvas>
+                <canvas id="inputSheet" width="1000" height="250"></canvas>
             </div>
-            <div id="result-box">
-                <p id="result"></p>
-            </div>
+            <h3>Result :</h3>
+            <div id="result"></div>
+            <button id="clear-btn">Clear</button>
         </div>
-        <button id="clear-btn">clear</button>
     </main>
     <footer>
         <p>By Thierry Bédard-Cortey</p>
