@@ -97,8 +97,8 @@ history = model.fit(
 )
 
 # Saving model structure
-plot_model(model, to_file='model.png', show_shapes=True)
-model.save('digits_recognizer.h5')
+plot_model(model, to_file='img/model.png', show_shapes=True)
+model.save('model.h5')
 
 # Loss history
 plt.plot(history.history['loss'])
@@ -106,7 +106,7 @@ plt.plot(history.history['val_loss'])
 plt.xlabel('epoch')
 plt.ylabel('loss')
 plt.legend(['train', 'validation'], loc='upper right')
-plt.savefig('loss_history.png')
+plt.savefig('img/loss_history.png')
 
 # Accuracy history
 plt.clf()
@@ -115,4 +115,4 @@ plt.plot(history.history['val_categorical_accuracy'])
 plt.xlabel('epoch')
 plt.ylabel('accuracy')
 plt.legend(['train', 'validation'], loc='upper right')
-plt.savefig('accuracy_history.png')
+plt.savefig('img/accuracy_history.png')

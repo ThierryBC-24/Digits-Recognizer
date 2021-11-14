@@ -18,7 +18,7 @@ for i, p in enumerate(predictions):
     test_result.append([int(i+1), int(np.argmax(p))])
 
 np.savetxt(
-    'test.csv',
+    'data/testResult.csv',
     test_result,
     header='ImageId,Label',
     comments='',
