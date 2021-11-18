@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     const imgHeight = 28;
     const padding = 90;
     let lastDigitX = 0;
-    const predictionThreshold = 0.5;
+    const predictionThreshold = 0.7;
 
     // Objects
     const inputCanvas = document.querySelector("#inputSheet");

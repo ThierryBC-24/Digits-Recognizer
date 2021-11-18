@@ -3,7 +3,7 @@ import numpy as np
 from tensorflow import keras
 
 # Load model
-model = keras.models.load_model('digits_recognizer.h5')
+model = keras.models.load_model('model.h5')
 
 # Load test data
 df_test = pd.read_csv('data/test.csv')
