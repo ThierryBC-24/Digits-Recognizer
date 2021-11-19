@@ -17,6 +17,10 @@ For the classification, I inspired myself from the LeNet-5 structure. My model's
 
 ![digits drawio (8)](https://user-images.githubusercontent.com/77757343/142507598-1d216d64-41f1-4d80-86ce-a9e683d7c9ec.png)
 
+## Data
+
+To train and test the model, I used the MNIST database.
+
 # Node.js application
 
 The application is a canvas that computes inputs so that each digit can be passed to the prediction function of the model. I used TensorFlow.js to convert the H5 model file to a usable JSON file.
