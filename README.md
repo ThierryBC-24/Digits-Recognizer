@@ -2,8 +2,6 @@
 
 A Node.js application running a convolutional neural network trained for handwritten digits recognition.
 
-You can try it out here: https://digits-recognizer-project.herokuapp.com/
-
 # Model
 
 ## Base
